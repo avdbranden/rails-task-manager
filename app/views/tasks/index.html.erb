@@ -3,5 +3,7 @@
   <h2> <%= link_to task.name, task_path(task) %></h2>
   <p><%= task.content %></p>
   <p>Completed? <%= "Yes" if task.completed == true %></p>
+  <%= link_to "Edit", edit_task_path(task)%>
+  <%= link_to "Delete", task_path(task), method: :delete%>
 <% end %>
 
