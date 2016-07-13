@@ -1,9 +1,4 @@
 <h1>Update a new task</h1>
 
-<%= form_for @task, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.label :name, "Name" %>
-  <%= f.text_field :name %>
-  <%= f.label :content, "Content" %>
-  <%= f.text_field :content%>
-  <%= f.submit "Update a Task" %>
-<% end %>
+<%= render partial: "form" %>
+

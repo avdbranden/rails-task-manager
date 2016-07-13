@@ -1,9 +1,3 @@
 <h1>Create a new task</h1>
 
-<%= form_for @task, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.label :name, "Name" %>
-  <%= f.text_field :name %>
-  <%= f.label :content, "Content" %>
-  <%= f.text_field :content%>
-  <%= f.submit "Create a Task" %>
-<% end %>
+<%= render partial: "form", locals: {action: "create", method: "post"} %>
